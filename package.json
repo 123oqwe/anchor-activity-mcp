@@ -1,0 +1,30 @@
+{
+  "name": "@anchor/activity-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Cross-platform desktop activity-tracking MCP server. Captures active window (app/title/url) every N seconds. Mac/Win/Linux via active-win.",
+  "bin": {
+    "anchor-activity-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx --watch src/index.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "active-win": "^9.0.0",
+    "better-sqlite3": "^11.5.0",
+    "nanoid": "^5.0.7"
+  },
+  "pnpm": { "onlyBuiltDependencies": ["better-sqlite3"] },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
